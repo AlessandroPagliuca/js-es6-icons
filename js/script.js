@@ -130,7 +130,7 @@ const icons = [
 //sviluppiamo il tpl da aggiungere in html per generare i box con le apposite variabili
 function createTpl(icon){
     const colTpl = `
-            <div class="col-12 col-sm-8 col-md-4 col-xl-3">
+            <div class="col-12 col-md-4 col-xl-3">
                 <div class="card d-flex flex-column text-center py-4 m-4">
                     <i class=" ${icon.prefix}${icon.family} ${icon.prefix}${icon.name} py-2" style="color:${icon.color}"></i>
                     <h6 class="text-uppercase"> ${icon.name} </h6>
@@ -144,9 +144,20 @@ function createTpl(icon){
 const changeSelect = document.getElementById('iconSelect');
 
 changeSelect.addEventListener('change',() => {
-//prendiamo il value nella select per visualizzare solo gli object che fanno parte di quella type
-const valueSelect = document.getElementById('iconSelect').value;
-console.log(valueSelect);
+    //prendiamo il value nella select per visualizzare solo gli object che fanno parte di quella type
+    const valueSelect = document.getElementById('iconSelect').value;
+    console.log(valueSelect);
+    icons.forEach((value) => {
+        if(valueSelect == value.type && value.type == 'animal'){
+            console.log('animal');
+        } else if(valueSelect == value.type && value.type == 'vegetable'){
+            console.log('vegetable');
+        } else if(valueSelect == value.type && value.type == 'user'){
+            console.log('user');
+        } else if(valueSelect == 'all'){
+            console.log('all');
+        }
+    });
 
 
 
