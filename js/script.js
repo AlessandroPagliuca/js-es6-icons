@@ -127,6 +127,18 @@ const icons = [
     }
 ];
 
+//BONUS 2 creazione delle option da aggiungere dinamicamente nella select
+const selectOption = document.getElementById('iconSelect');
+const typeOption = [];
+for(let i = 0; i < icons.length; i++){
+    if(!typeOption.includes(icons[i].type)){
+        typeOption.push(icons[i].type);
+        const optionCreate = document.createElement('option');
+        optionCreate.value = icons[i].type;
+        optionCreate.text = icons[i].type;
+        selectOption.appendChild(optionCreate);
+    }
+}
 //sviluppiamo il tpl da aggiungere in html per generare i box con le apposite variabili
 function createTpl(icon){
     const colTpl = `
