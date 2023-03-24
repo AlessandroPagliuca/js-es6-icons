@@ -3,6 +3,13 @@
     --c92-bg-nav:#29b1dd;
 }
 
+
+body{
+    background-color: var(--c92-bg-main);
+}
+header{
+    background-color: white;
+}
 h1{
     color: var(--c92-bg-nav);
 }
@@ -12,8 +19,8 @@ nav{
 
 }
 
-main{
-    background-color: var(--c92-bg-main);
+.c92Cursor{
+    cursor: pointer;
 }
 
 .c92-boxShadow{

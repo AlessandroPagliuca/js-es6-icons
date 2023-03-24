@@ -152,9 +152,9 @@ for(let i = 0; i < icons.length; i++){
 //sviluppiamo il tpl da aggiungere in html per generare i box con le apposite variabili
 function createTpl(icon){
     const colTpl = `
-            <div class="col-12 col-md-4 col-xl-3">
-                <div class="c92-boxShadow card d-flex flex-column text-center py-4 m-4">
-                    <i class=" ${icon.prefix}${icon.family} ${icon.prefix}${icon.name} py-2" style="color:${icon.color}"></i>
+            <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+                <div class="c92-boxShadow c92Cursor card d-flex flex-column text-center py-4 m-4">
+                    <i class=" ${icon.prefix}${icon.family} ${icon.prefix}${icon.name} py-2 fs-1" style="color:${icon.color}"></i>
                     <h6 class="text-uppercase"> ${icon.name} </h6>
                 </div>
             </div>
