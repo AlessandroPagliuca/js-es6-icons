@@ -130,14 +130,12 @@ const icons = [
 //sviluppiamo il tpl da aggiungere in html per generare i box con le apposite variabili
 function createTpl(icon){
     const colTpl = `
-        <div class="row">
             <div class="col-12 col-sm-8 col-md-4 col-xl-3">
                 <div class="card d-flex flex-column text-center ">
                     <i class=" ${icon.prefix}${icon.family} ${icon.prefix}${icon.name} "></i>
                     <h6 class="text-uppercase"> ${icon.name} </h6>
                 </div>
             </div>
-        </div>
     `;
     return colTpl;
 }
@@ -153,13 +151,13 @@ console.log(valueSelect);
 });
 
 function init(){
-    const containerPost = document.querySelector('.container');
+    const containerIcon = document.querySelector('.row');
     let content = '';
     for(let i = 0; i < icons.length; i++){
         const template = createTpl(icons[i]);
         content += template;
     }
-    containerPost.innerHTML = content;
+    containerIcon.innerHTML = content;
    
 }
 init()
