@@ -148,14 +148,14 @@ changeSelect.addEventListener('change',() => {
     const valueSelect = document.getElementById('iconSelect').value;
     console.log(valueSelect);
     icons.forEach((value) => {
-        if(valueSelect == value.type && value.type == 'animal'){
+        if(valueSelect == 'all'){
+            console.log('animal','vegetable','user');
+        } else if(valueSelect == value.type && value.type == 'animal'){
             console.log('animal');
         } else if(valueSelect == value.type && value.type == 'vegetable'){
             console.log('vegetable');
         } else if(valueSelect == value.type && value.type == 'user'){
             console.log('user');
-        } else if(valueSelect == 'all'){
-            console.log('all');
         }
     });
 
