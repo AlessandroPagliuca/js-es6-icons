@@ -140,3 +140,11 @@ function createTpl(icon){
     `;
     return colTpl;
 }
+
+const changeSelect = document.getElementById('iconSelect');
+changeSelect.addEventListener('change',() => {
+    
+const valueSelect = document.getElementById('iconSelect').value;
+console.log(valueSelect);
+
+});
