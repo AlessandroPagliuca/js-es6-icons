@@ -130,10 +130,14 @@ const icons = [
 //sviluppiamo il tpl da aggiungere in html per generare i box con le apposite variabili
 function createTpl(icon){
     const colTpl = `
-    <div class="col-12 col-sm-8 col-md-4 col-xl-3">
-         <div class="card d-flex flex-column text-center ">
-            <i class=" ${icon.prefix}${icon.family} ${icon.prefix}${icon.name} "></i>
-             <h6 class="text-uppercase">${icon.name}</h6>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-8 col-md-4 col-xl-3">
+                <div class="card d-flex flex-column text-center ">
+                <i class=" ${icon.prefix}${icon.family} ${icon.prefix}${icon.name} "></i>
+                <h6 class="text-uppercase"> ${icon.name} </h6>
+            </div>
+        </div>
         </div>
     </div>
     
@@ -141,10 +145,13 @@ function createTpl(icon){
     return colTpl;
 }
 
+//andiamo a prendere l'id della select per attaccarci l'evento  
 const changeSelect = document.getElementById('iconSelect');
+
 changeSelect.addEventListener('change',() => {
-    
+//prendiamo il value nella select per visualizzare solo gli object che fanno parte di quella type
 const valueSelect = document.getElementById('iconSelect').value;
 console.log(valueSelect);
+
 
 });
