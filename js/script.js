@@ -18,114 +18,124 @@ const icons = [
         prefix: 'fa-',
         type: 'animal',
         family: 'solid',
-        color: 'orange'
+        color: randomColors()
     },
     {
         name: 'crow',
         prefix: 'fa-',
         type: 'animal',
         family: 'solid',
-        color: 'orange'
+        color: randomColors()
     },
     {
         name: 'dog',
         prefix: 'fa-',
         type: 'animal',
         family: 'solid',
-        color: 'orange'
+        color: randomColors()
     },
     {
         name: 'dove',
         prefix: 'fa-',
         type: 'animal',
         family: 'solid',
-        color: 'orange'
+        color: randomColors()
     },
     {
         name: 'dragon',
         prefix: 'fa-',
         type: 'animal',
         family: 'solid',
-        color: 'orange'
+        color: randomColors()
     },
     {
         name: 'horse',
         prefix: 'fa-',
         type: 'animal',
         family: 'solid',
-        color: 'orange'
+        color: randomColors()
     },
     {
         name: 'hippo',
         prefix: 'fa-',
         type: 'animal',
         family: 'solid',
-        color: 'orange'
+        color: randomColors()
     },
     {
         name: 'fish',
         prefix: 'fa-',
         type: 'animal',
         family: 'solid',
-        color: 'orange'
+        color: randomColors()
     },
     {
         name: 'carrot',
         prefix: 'fa-',
         type: 'vegetable',
         family: 'solid',
-        color: 'green'
+        color: randomColors()
     },
     {
         name: 'apple-alt',
         prefix: 'fa-',
         type: 'vegetable',
         family: 'solid',
-        color: 'green'
+        color: randomColors()
     },
     {
         name: 'lemon',
         prefix: 'fa-',
         type: 'vegetable',
         family: 'solid',
-        color: 'green'
+        color: randomColors()
     },
     {
         name: 'pepper-hot',
         prefix: 'fa-',
         type: 'vegetable',
         family: 'solid',
-        color: 'green'
+        color: randomColors()
     },
     {
         name: 'user-astronaut',
         prefix: 'fa-',
         type: 'user',
         family: 'solid',
-        color: 'blue'
+        color: randomColors()
     },
     {
         name: 'user-graduate',
         prefix: 'fa-',
         type: 'user',
         family: 'solid',
-        color: 'blue'
+        color: randomColors()
     },
     {
         name: 'user-ninja',
         prefix: 'fa-',
         type: 'user',
         family: 'solid',
-        color: 'blue'
+        color: randomColors()
     },
     {
         name: 'user-secret',
         prefix: 'fa-',
         type: 'user',
         family: 'solid',
-        color: 'blue'
+        color: randomColors()
     }
 ];
+
+//BONUS 1
+function randomColors(){
+    let colorPre = '#';
+    const characters = '0123456789ABCDEF';
+    for(let i = 0; i < 6; i++){
+        colorPre += characters[Math.floor(Math.random() * 16)];
+    }
+    return colorPre;
+}
 
 //BONUS 2 creazione delle option da aggiungere dinamicamente nella select
 const selectOption = document.getElementById('iconSelect');
