@@ -140,11 +140,6 @@ function createTpl(icon){
     return colTpl;
 }
 
-//array filtrato per stampare a schermo solo i type selezionati dalla select
-const filterIcons = icons.filter((icon) =>{
-    console.log(icon.type);
-    return icon.type;
-});
 
 //andiamo a prendere l'id della select per attaccarci l'evento  
 const changeSelect = document.getElementById('iconSelect');
@@ -153,9 +148,12 @@ changeSelect.addEventListener('change',() => {
     //prendiamo il value nella select per visualizzare solo gli object che fanno parte di quella type
     const valueSelect = document.getElementById('iconSelect').value;
     console.log(valueSelect);
-    
-
-
+    //array filtrato per stampare a schermo solo i type selezionati dalla select
+    const filterIcons = icons.filter((icon) =>{
+        const selectedType = changeSelect.value;
+        return (selectedType === 'all') ? true : icon.type === selectedType;
+    });
+    init(filterIcons);
 });
 
 function init(filterIcons){
@@ -168,4 +166,4 @@ function init(filterIcons){
     containerIcon.innerHTML = content;
    
 }
-init(filterIcons)
+init(icons);
