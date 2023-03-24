@@ -131,8 +131,8 @@ const icons = [
 function createTpl(icon){
     const colTpl = `
             <div class="col-12 col-sm-8 col-md-4 col-xl-3">
-                <div class="card d-flex flex-column text-center ">
-                    <i class=" ${icon.prefix}${icon.family} ${icon.prefix}${icon.name} "></i>
+                <div class="card d-flex flex-column text-center py-4 m-4">
+                    <i class=" ${icon.prefix}${icon.family} ${icon.prefix}${icon.name} py-2" style="color:${icon.color}"></i>
                     <h6 class="text-uppercase"> ${icon.name} </h6>
                 </div>
             </div>
@@ -147,6 +147,8 @@ changeSelect.addEventListener('change',() => {
 //prendiamo il value nella select per visualizzare solo gli object che fanno parte di quella type
 const valueSelect = document.getElementById('iconSelect').value;
 console.log(valueSelect);
+
+
 
 });
 
