@@ -143,7 +143,7 @@ for(let i = 0; i < icons.length; i++){
 function createTpl(icon){
     const colTpl = `
             <div class="col-12 col-md-4 col-xl-3">
-                <div class="card d-flex flex-column text-center py-4 m-4">
+                <div class="c92-boxShadow card d-flex flex-column text-center py-4 m-4">
                     <i class=" ${icon.prefix}${icon.family} ${icon.prefix}${icon.name} py-2" style="color:${icon.color}"></i>
                     <h6 class="text-uppercase"> ${icon.name} </h6>
                 </div>

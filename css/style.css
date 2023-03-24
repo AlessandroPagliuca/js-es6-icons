@@ -1,0 +1,21 @@
+:root{
+    --c92-bg-main:#dddddd;
+    --c92-bg-nav:#29b1dd;
+}
+
+h1{
+    color: var(--c92-bg-nav);
+}
+
+nav{
+    background-color: var(--c92-bg-nav);
+
+}
+
+main{
+    background-color: var(--c92-bg-main);
+}
+
+.c92-boxShadow{
+    box-shadow: 0rem 0rem .5rem grey;
+}
