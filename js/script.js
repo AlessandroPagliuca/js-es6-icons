@@ -140,6 +140,12 @@ function createTpl(icon){
     return colTpl;
 }
 
+//array filtrato per stampare a schermo solo i type selezionati dalla select
+const filterIcons = icons.filter((icon) =>{
+    console.log(icon.type);
+    return icon.type;
+});
+
 //andiamo a prendere l'id della select per attaccarci l'evento  
 const changeSelect = document.getElementById('iconSelect');
 
@@ -147,30 +153,19 @@ changeSelect.addEventListener('change',() => {
     //prendiamo il value nella select per visualizzare solo gli object che fanno parte di quella type
     const valueSelect = document.getElementById('iconSelect').value;
     console.log(valueSelect);
-    icons.forEach((value) => {
-        if(valueSelect == 'all'){
-            console.log('animal','vegetable','user');
-        } else if(valueSelect == value.type && value.type == 'animal'){
-            console.log('animal');
-        } else if(valueSelect == value.type && value.type == 'vegetable'){
-            console.log('vegetable');
-        } else if(valueSelect == value.type && value.type == 'user'){
-            console.log('user');
-        }
-    });
-
+    
 
 
 });
 
-function init(){
+function init(filterIcons){
     const containerIcon = document.querySelector('.row');
     let content = '';
-    for(let i = 0; i < icons.length; i++){
-        const template = createTpl(icons[i]);
+    for(let i = 0; i < filterIcons.length; i++){
+        const template = createTpl(filterIcons[i]);
         content += template;
     }
     containerIcon.innerHTML = content;
    
 }
-init()
+init(filterIcons)
